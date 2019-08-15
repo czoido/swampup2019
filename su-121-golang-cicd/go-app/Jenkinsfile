@@ -22,7 +22,7 @@ node {
     
     stage ('Setup Artifactory') {
         sh "printenv"
-        sh 'config artifactory'
+        echo "config artifactory cli"
         withCredentials([usernamePassword(credentialsId: 'artifactory', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh 'echo $PASSWORD'
             sh 'echo $USERNAME'

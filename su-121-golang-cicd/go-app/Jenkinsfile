@@ -2,7 +2,7 @@
 
 def GO_MOD_REPO = "go"
 def GO_BIN_REPO = "gi-binaries"
-def SERVER_URL = "http://localhost:8081/artifactory"
+def SERVER_URL = "http://192.168.1.136:8081/artifactory"
 def BUILD_NAME = JOB_NAME
 def BUILD_NUMBER = env.BUILD_NUMBER
 

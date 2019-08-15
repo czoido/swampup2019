@@ -21,6 +21,7 @@ node {
     }
     
     stage ('Setup Artifactory') {
+        sh "printenv"
         withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: CREDENTIALS, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
             sh "jfrog rt config --url ${SERVER_URL} --user ${env.USERNAME} --password ${env.PASSWORD}"
           }
